@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    *{ margin:0;
+        padding:0;
+    }
+    body{
+        background-color :rgb(0,0,33);
+        color:white;
+        font-family:'Poppins',sans-serif;
+    }
+    nav{
+        display: flex;
+        position:fixed;
+        top: 0;
+          width: 100%;
+         z-index: 100;
+
+        justify-content: space-around;
+        align-items:center;
+        height:85px;
+        background-color: rgb(38, 9, 66);
+    }
+    nav ul{
+        display:flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style:none;
+        margin:0 23px;
+    }
+    nav ul li a{
+        text-decoration:none;
+        color:azure;
+
+    }
+    nav ul li a:hover{
+        font-size: 1.7 rem;
+        color:rgb(99, 99, 183);
+        
+    }
+    .left{
+        font-size: 1.5rem;
+    }
+    main hr{
+        border: 0;
+        background:rgb(169, 151, 185);
+        height: 0.4em;
+        margin: 60px 40px;
+    }
+    .firstSection {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        /* //margin: 80px 0; */
+
+    }
+    .firstSection>div{
+        width:30%;
+        
+    }
+    .lefttSection{
+        margin: 70px;
+        width:34px;
+        font-size:3rem;
+    }
+    .rightSection img{
+        width:120%;
+        margin-top: 80px;
+        
+        
+    }
+    #element{
+        color:blueviolet;
+    }
+    
+    .secondSection{
+        max-width:80vw;
+        padding-top: 80px; 
+        margin:auto; 
+        height:79vh;
+        margin-top:0px;
+    }
+    .secondSection h1{
+
+        font-size:1.6rem;
+    }
+    .secondSection .box{
+        background:white;
+        height:2px;
+        margin:56px 0;
+        width:80vw;
+        display: flex;
+    }
+    .secondSection .vertical{
+        background:white;
+        height:93px;
+        margin: 0 150px;
+        width:1px;
+    }
+    .image-top{
+        width:23px;
+        position:relative;
+        top:-32px;
+        left:-9px;
+    }
+    .vertical-title{
+        position:relative;
+        top:100px;
+        width: 150px;
+
+    }
+    .vertical-d{
+        top:110px;
+        position: relative;
+        color:grey;
+        width:150px;
+        font-size:15px;
+    }
+    .thirdSection{
+        max-width:80vw;
+        margin:auto;
+        height:100vh;
+    }
+    .thirdSection h1{
+        padding-top: 80px; 
+        font-size:1.6rem;
+    }
+    /* .thirdSection .box1{
+        background:white;
+        height:2px;
+        margin:56px 0;
+        width:80vw;
+        display: flex;
+    } */
+    .card {
+        /* background-color: #f9f9f9; */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(223, 20, 20, 0.1);
+  width: 300px;
+  margin: 20px;
+  position:relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(163, 150, 150, 0.5);
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 0.4;
+}
+
+.card-image {
+  width: 80%;
+  height: auto;
+  margin: 20px;
+  
+
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  margin-top: 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #777;
+}
+.view-more {
+  /* background-color: #f1f1f1; */
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.view-more:hover {
+  background-color: #ddd;
+}
+.box1 {
+  display: flex;
+  justify-content: space-between;
+}
+.footer {
+  background-color: #212020;
+  color: #fff;
+  padding: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  font-size: 12px;
+
+}
+
+.footer p {
+   
+  margin: auto;
+  font-size: 12px;
+
+}
+.lastSection{
+        max-width:80vw;
+        margin:auto;
+        height:90vh;
+    }
+.lastSection {
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        /* //margin: 80px 0; */
+
+    }
+    .lastSection>div{
+        width:30%;
+        
+    }
+    .lefttSection1{
+        margin: 70px;
+        width:34px;
+        font-size:3rem;
+    }
+    .image{
+       width:122%;
+        height: 500px ;
+    border-radius: 50%;        
+        
+    }
+@media screen and (max-width:1300px){
+    
+    .box{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 40px;
+    }
+    .vertical{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .secondSection{
+        flex-direction: column;
+        align-items: flex-start;
+    
+        
+    }
+    /* .vertical-title,.vertical-d{
+        left:45px;
+    } */
+    .horizontal-title, h6{
+        top:-8%;
+    }
+    
+   .box img{
+       height:7rem!important ;
+   }
+
+  
+    .secondSection.box{
+        width:50vw;
+    }
+    .firstSection{
+        flex-direction: column-reverse;
+    }
+    nav{
+        flex-direction: column;
+    }
+    .lefttSection{
+        width: 100% !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .box1 {
+        
+    flex-direction: column;
+    align-items: flex-start;
+  
+  }
+  .rightSection{
+    width: 500px !important;
+  }
+  .body{
+    min-width: fit-content;
+  }
+  .lastSection{
+        display:none;
+    }
+  
+
+  
+  .footer{
+    display: none;
+  }
+    
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">My Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#ed" class="scrollLink">Education</a></li>
+                    <li><a href="#pr">Projects</a></li>
+                    <li><a href="#ab">About</a></li>
+                    <li><a href="https://drive.google.com/file/d/1OmAY0ypiqm68HTb9Q7Jkm3uPvYee6y8I/view?usp=sharing">Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstSection">
+            <div class="lefttSection">Hii, I am RIDHI
+            <div>I am a </div>
+    
+            <span id="element"></span>
+              </div>
+            <div class="rightSection">
+                <img src="developer2.png">
+            </div>
+            
+        </section><hr>
+        <section class="secondSection" id="ed">
+        
+           <h1>Educational Qualification</h1>
+           <div class="box">
+            <div class="vertical">
+                <div class="vertical-title">
+                    High school education(2018)
+                </div>
+                <div class="vertical-d">
+                   Grade-98%;
+                   School-DAV Ara(Jharkhad)
+                   <div><B><I>First Rank holder in the district</I></B></div>
+                </div>
+            </div>
+            
+            <div class="vertical">
+                <div class="vertical-title">
+                    Higher secondry education(2019-2021)
+                </div>
+                <div class="vertical-d">
+                   Grade-96.2%;
+                   School-DAV Gandhinagar Ranchi(Jharkhad)
+                   Awarded with Academic Excellence Award
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    LEGRAND SCHOLAR(2021)
+                </div>
+                <div class="vertical-d">
+                   Among Top 60 selected candidates across India
+                   
+                </div>
+            </div>
+            <div class="vertical">
+                <div class="vertical-title">
+                    B.Tech in ECE(2021-2025)
+                </div>
+                <div class="vertical-d">
+                   current gpa-7.61
+                   Insitute-Indian Institue of Information Technology Allahbad
+                   
+                </div>
+            </div>
+            
+        
+           </div>
+        </section><hr>
+        <section class="thirdSection" id="pr">
+            <h1>My Projects</h1>
+            <div class="box1">
+                <div class="card">
+                    <img src="news1.png" alt="Image" class="card-image">
+                    <div class="card-content">
+                        <br>
+                      <h3 class="card-title">News Glance</h3>
+                      <p class="card-description">A website where you can go through news at one glance.This will keep you updated.</p>
+                      <button class="view-more">View More</button>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="developer.png" alt="Image" class="card-image">
+                    <div class="card-content">
+                      <h3 class="card-title">Task Traker</h3>
+                      <p class="card-description">This will help the user to manage the tasks he need to perform and delete it tool.This will help the user in organizing his task</p>
+                      <button class="view-more">View More</button>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img src="announce.png" alt="Image" class="card-image">
+                    <div class="card-content">
+                      <h3 class="card-title">Announcement Website</h3>
+                      <p class="card-description">This website is designed to post all the Announcement of our organisation at one place.The idea was to organise the announcements posted by various societies<br><I>Built in hackathon(hackout)</I></p>
+                      <button class="view-more">View More</button>
+                    </div>
+                  </div>
+                
+                  
+            </div>
+
+        </section><hr>
+        <section class="lastSection" id="ab">
+            <h1>More About me</h1>
+            
+            <div class="leftsection1">
+                Hi, I'm Ridhi, pre-final year student at IIIT-A.Enthusiastic student to contribute through hard work, attention and excellent organizational skills.
+Good understanding of programming. Motivated to learn, grow and excell.
+ Love learning and implementing new technologies.My skills include c++, html,css, bootstrap, php and  basic  mern ,react js.
+            </div>
+            <div class="rightsection1">
+                <img src="ridhi.jpg" class="image">
+              </div>
+            
+        </section>
+        <section class="fourthSection">
+            <footer class="footer">
+                <div class="footer-content">
+                  <p>&copy; 2023 Ridhi kumari. All rights reserved.</p>
+                  
+                </div>
+              </footer>
+              
+        </section>
+
+    </main>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed=new Typed('#element',{
+     strings:['Web Developer','And Programmer'],
+         typeSpeed:50,
+        });
+    </script>
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("a.scrollLink").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top
+              }, 500);
+          });
+      });
+  </script>
+
+</body>
+</html>
